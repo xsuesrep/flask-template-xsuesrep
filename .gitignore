@@ -1,4 +1,2 @@
-/requirements.txt
-/server.py
-/templates
-/__pycache__
+env/ 
+pycache/
