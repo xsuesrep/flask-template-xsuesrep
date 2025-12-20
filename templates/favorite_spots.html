@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <h2>รายการกีฬาที่ชอบ</h2>
+<ol>
+    <li>{{ spots[0] }}</li>
+    <li>{{ spots[1] }}</li>
+    <li>{{ spots[2] }}</li>
+</ol>
+    <h2>รายการกีฬาที่ชอบ (for loop)</h2>
+    <ol>
+        {% for spot in spots %}
+            <li><h3>{{ spot }}</h3></li>
+        {% endfor %}
+    </ol>
+    <hr>    
+{% endblock %}
