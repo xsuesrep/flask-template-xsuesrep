@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document - {% block title %}{% endblock %}
+
+         </title>
+</head>
+<body>
+<!-- <a href="/">Home</a> |
+<a href="/about">About</a> |
+<a href="/favorite/foods">Favorite Foods</a> |
+<a href="/favorite/spots">Favorite Spots</a> | -->
+ <a href="{{ url_for('index') }}">Home</a> |
+  <a href="{{ url_for('about') }}">About</a> |
+  <a href="{{ url_for('favorite_foods') }}">Favorite Foods</a> |
+  <a href="{{ url_for('favorite_spots') }}">Favorite Spots</a> |
+  <a href="{{ url_for('favorite_movies') }}">Favorite Movies</a>
+  
+<hr>
+  <h1>{{ title }}</h1>
+
+  {% block content %}{% endblock %}
+
+</body>
+</html>
