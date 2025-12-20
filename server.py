@@ -34,7 +34,12 @@ def favorite_spots():
     return render_template('favorite_spots.html',
                             spots=spots)
 
-
+@app.route('/favorite/movies')
+def favorite_movies():      
+    title = 'Favorite Movies'
+    movies = ['Avatar', 'The Lord of the Rings', 'Jaws', 'john wick', 'Home Alone']
+    return render_template('favorite_movies.html',  
+                            movies=movies) 
 
 if __name__ == "__main__":
     app.run(debug=True)
