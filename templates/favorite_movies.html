@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+     <h1>{{ title }}</h1>
+    <h2>หนังที่ชอบ</h2>
+<ol>
+    <li>{{ movies[0] }}</li>
+    <li>{{ movies[1] }}</li>
+    <li>{{ movies[2] }}</li>
+    <li>{{ movies[3] }}</li>
+    <li>{{ movies[4] }}</li>
+</ol>
+    <h2>รายการหนังที่ชอบดู(for loop)</h2>
+    <ol>
+        {% for movie in movies %}
+            <li><h3>{{ movie }}</h3></li>
+        {% endfor %}
+    </ol>
+    <hr>
+{% endblock %}  
